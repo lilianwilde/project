@@ -1,0 +1,21 @@
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div> 
+
+
+  <div id="list-posts" *ngFor= "let post of jsonPosts">
+    <form (submit)= "jsonPosts">
+      <input type="text" value= {{jsonPosts}}> 
+    </form>
+  </div>
+  <div class="button-submit">
+    <button type="submit">Add Post</button>
+  </div>
+ 
+ 
+
+
+<router-outlet></router-outlet>
