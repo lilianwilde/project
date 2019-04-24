@@ -1,21 +1,19 @@
 
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}!
   </h1>
  </div> 
 
-
-  <div id="list-posts" *ngFor= "let post of jsonPosts">
-    <form (submit)= "jsonPosts">
-      <input type="text" value= {{jsonPosts}}> 
-    </form>
-  </div>
+ <form (submit)= "jsonPosts">
+   <textarea cols="50"></textarea>
   <div class="button-submit">
-    <button type="submit">Add Post</button>
+    <input type="button" (click)="adicionarPost()" value="Add Post">
   </div>
- 
- 
+</form>
+<br>
+  <div id="list-posts" *ngFor= "let post of jsonPosts">
+{{post.datahora}} - {{post.texto}}
 
 
-<router-outlet></router-outlet>
+  </div>
